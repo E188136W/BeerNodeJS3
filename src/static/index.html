@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BeerNodeJS</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icons/favicon.ico"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/materializeDesign/css/materialize.css"
+    />
+    <link rel="stylesheet" href="assets/vendor/Vuetify/vuetify.min.css" />
+    <script
+      src="https://kit.fontawesome.com/1887c0c0e9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li><a href="">Brasseries</a></li>
+            <li><a href="">Bières</a></li>
+            <li><a href="test.html">Test</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1>API Rest & Communication WebSocket</h1>
+      <div id="tchat-global">
+        <div id="connection-tchat-global" v-show="displayConnection">
+          <input
+            v-model="user"
+            type="text"
+            v-on:keyup.enter="onUserConnection"
+          />
+          <button
+            type="submit"
+            @click="onUserConnection"
+            class="btn orange darken-1"
+          >
+            Se connecter
+          </button>
+        </div>
+        <div v-show="displayGlobalTchat">
+          <div id="global-input">
+            <input
+              v-model="message"
+              type="text"
+              v-on:keyup.enter="onUserInput"
+            />
+            <button
+              type="submit"
+              @click="onUserInput"
+              class="btn orange darken-1"
+            >
+              Envoyer
+            </button>
+          </div>
+          <div id="tchat-box">
+            <ul>
+              <li v-for="message in allMessage">
+                {{ message.user }} : {{message.message}}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer></footer>
+    <script type="module" src="assets/vendor/VueJS/vue.min.js"></script>
+    <script type="module" src="assets/vendor/Vuetify/vuetify.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="assets/js/tchat-global.js"></script>
+  </body>
+</html>

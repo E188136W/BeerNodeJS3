@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BeerNodeJS</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icons/favicon.ico"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/materializeDesign/css/materialize.css"
+    />
+    <link rel="stylesheet" href="assets/vendor/Vuetify/vuetify.min.css" />
+    <script
+      src="https://kit.fontawesome.com/1887c0c0e9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>TEST</h1>
+    <!--
+    <div id="navBarre">
+      <nav>
+        <i class="medium material-icons">home</i>
+        <input type="button" value="Home" />
+        <input type="button" value="Brasseries" />
+        <input type="button" value="Bières" />
+      </nav>
+    </div>-->
+
+    <nav>
+      <div class="nav-wrapper">
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li><a href="">Brasseries</a></li>
+          <li><a href="">Bières</a></li>
+          <li><a href="test.html">Test</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!--<div id="showBrasserie">
+
+    </div>
+    <div id="shwoBieres">
+      
+    </div>-->
+    <script type="module" src="assets/vendor/VueJS/vue.min.js"></script>
+    <script type="module" src="assets/vendor/Vuetify/vuetify.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="assets/js/tchat-global.js"></script>
+  </body>
+</html>
