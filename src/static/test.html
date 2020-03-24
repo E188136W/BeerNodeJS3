@@ -25,16 +25,6 @@
   </head>
   <body>
     <h1>TEST</h1>
-    <!--
-    <div id="navBarre">
-      <nav>
-        <i class="medium material-icons">home</i>
-        <input type="button" value="Home" />
-        <input type="button" value="Brasseries" />
-        <input type="button" value="Bières" />
-      </nav>
-    </div>-->
-
     <nav>
       <div class="nav-wrapper">
         <ul id="nav-mobile" class="left hide-on-med-and-down">
@@ -47,12 +37,21 @@
         </ul>
       </div>
     </nav>
-    <!--<div id="showBrasserie">
-
-    </div>
-    <div id="shwoBieres">
-      
-    </div>-->
+    <form action="api/beer/" method="get">
+      <p>
+        <label for="">Choissisez une bière selon son ID hihi </label>
+        <input type="number" name="" id="" autofocus />
+        <input type="submit" />
+      </p>
+    </form>
+    <form action="api/beer/deg/" method="GET">
+      <p>
+        <label for="">Choissisez un degré de bière hihi ?</label>
+        <input type="number" name="" id="" autofocus />
+        <input type="submit" />
+      </p>
+    </form>
+    <script src="/js/seeBeer.js"></script>
     <script type="module" src="assets/vendor/VueJS/vue.min.js"></script>
     <script type="module" src="assets/vendor/Vuetify/vuetify.js"></script>
     <script src="/socket.io/socket.io.js"></script>

@@ -15,7 +15,7 @@ const app = new Vue({
   methods: {
     onUserConnection: function() {
       if (this.user != "") {
-        this.allUser.push(this.user);
+        this.allUser.unshift(this.user);
         socket.emit("new-user-connection", this.user);
         this.displayConnection = false;
         this.displayGlobalTchat = true;
@@ -23,7 +23,7 @@ const app = new Vue({
     },
     onUserInput: function() {
       if (this.message != "") {
-        this.allMessage.push({ user: this.user, message: this.message });
+        this.allMessage.unshift({ user: this.user, message: this.message });
         socket.emit("on-user-input", {
           user: this.user,
           message: this.message

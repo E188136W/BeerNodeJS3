@@ -36,12 +36,12 @@ io.on("connection", function(socket) {
   socket.emit("init", users, messages);
 
   socket.on("new-user-connection", function(data) {
-    users.push(data);
+    users.unshift(data);
     socket.broadcast.emit("broadcast-users", users);
   });
 
   socket.on("on-user-input", function(data) {
-    messages.push(data);
+    messages.unshift(data);
     socket.broadcast.emit("broadcast-messages", messages);
   });
 });
